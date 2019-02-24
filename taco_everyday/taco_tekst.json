@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "kategori": "forretter",
+        "navn": "Mexi-Hapser",
+        "pris": 35,
+        "kort": "En lille bid af Mexico",
+        "lang": "Panko stegt kylling med frisk blød ost. Serveret med en syrlig let persille-mynte dressing.",
+        "oprindelse": "Mexico",
+        "billede": "hapser"
+},
+    {
+        "id": 2,
+        "kategori": "forretter",
+        "navn": "Majskolbe",
+        "pris": 35,
+        "kort": "Smør grillet majskolbe",
+        "lang": "En traditionel lækker majskolbe. Langttidsgrillet og smurt ind i hjemmerørt urtesmør",
+        "oprindelse": "Mexico",
+        "billede": "majskolbe"
+},
+    {
+        "id": 3,
+        "kategori": "hovedretter",
+        "navn": "Burrito med fisk",
+        "pris": 105,
+        "kort": "Hjemmelavet burrito med lækker pankestegt fisk",
+        "lang": "En lækker traditionel mexicansk fisk, vendt og stegt i panko. Rullet i hjemmelavet burrito-pandekage med korriander, kål og fiskesauce",
+        "oprindelse": "Mexico",
+        "billede": "burrito_fisk"
+},
+    {
+        "id": 4,
+        "kategori": "hovedretter",
+        "navn": "Burrito",
+        "pris": 95,
+        "kort": "Den klassiske burrito",
+        "lang": "Den burritto man skal have samgt, for at være mexicaner. Fyldt med lækker sprødt kål, avocado, jalapeno og myntedressing",
+        "oprindelse": "Mexico",
+        "billede": "burrito"
+},
+    {
+        "id": 5,
+        "kategori": "hovedretter",
+        "navn": "Grillet Taco",
+        "pris": 95,
+        "kort": "Grillet taco med alt det gode",
+        "lang": "En klassisk traditionel taco med grillet gedeost, kålsalat, grillet majs og med sesamdressing",
+        "oprindelse": "Mexico",
+        "billede": "grillet_taco"
+},
+    {
+        "id": 6,
+        "kategori": "hovedretter",
+        "navn": "Mexi-Burger",
+        "pris": 110,
+        "kort": "Mexicansk burger lavet med kærlighed",
+        "lang": "Mexicansk burger med safting oksekødsbøf, hjemmelavet tomatsalasa, syltede jalapenoes samt cramet avocado.  ",
+        "oprindelse": "Mexico",
+        "billede": "mexi-burger"
+},
+    {
+        "id": 7,
+        "kategori": "hovedretter",
+        "navn": "Mexi-Salat",
+        "pris": 90,
+        "kort": "Frisk Mexicansk salat med tuntartar",
+        "lang": "En frisk og lækker salat med eddammebønner, tuntartar, honningmelon, agurker, avocado, kål og koriander. ",
+        "oprindelse": "Mexico",
+        "billede": "salat"
+},
+    {
+        "id": 8,
+        "kategori": "hovedretter",
+        "navn": "Taco-Everyday",
+        "pris": 110,
+        "kort": "Byg-Selv-Taco",
+        "lang": "Få muligheden for at smage lidt af hele Mexico med Taco-Everyday's spcielle byg-selv taco. Du får 6 forskellige skåle med fyld og hjemmelavet taco-skaller ad libitum",
+        "oprindelse": "Mexico",
+        "billede": "taco"
+},
+    {
+        "id": 9,
+        "kategori": "desserter",
+        "navn": "Kop-Kage",
+        "pris": 45,
+        "kort": "Lækker chokoladekage",
+        "lang": "Super lækker, blød chokoladekage. Lavet direkte i en kop og nydes med ske og mælke-fløde skum på toppen",
+        "oprindelse": "Mexico",
+        "billede": "cup_kage"
+},
+    {
+        "id": 10,
+        "kategori": "desserter",
+        "navn": "Hjemmelavet is",
+        "pris": 45,
+        "kort": "Creamet sød chokolade/vanlije is",
+        "lang": "En hjemmerørt lækker creamet is med ægte chokoladestykker.",
+        "oprindelse": "Mexico",
+        "billede": "is"
+},
+    {
+        "id": 11,
+        "kategori": "desserter",
+        "navn": "Lime Kage",
+        "pris": 45,
+        "kort": "En sød og sur lime kage",
+        "lang": "En perfekt afslutning på et mexicansk måltid - lækker frisk og sød på sammetid",
+        "oprindelse": "Mexico",
+        "billede": "lime_kage"
+},
+    {
+        "id": 12,
+        "kategori": "drikkevarer",
+        "navn": "Hyldenlomst-Cocktail",
+        "pris": 65,
+        "kort": "Frisk sød hyledeblomstlemonade med gin",
+        "lang": "En dejlig hjemmelavet læskende hyldeblomstsaft blandet med massere af is, gin og basilikum",
+        "oprindelse": "Mexico",
+        "billede": "sommerdrik-med-hyldeblomst-gin"
+},
+    {
+        "id": 13,
+        "kategori": "drikkevarer",
+        "navn": "Corona",
+        "pris": 35,
+        "kort": "Is kold og klassisk - smagen af en varm dag i mexico",
+        "lang": "Den traditionelle mexikanske øl, med en frisk smag af sommer og tilhørende limeskive på toppen.",
+        "oprindelse": "Mexico",
+        "billede": "corona"
+},
+    {
+        "id": 14,
+        "kategori": "drikkevarer",
+        "navn": "Mynte Lemonade",
+        "pris": 25,
+        "kort": "Hjemmelavet lemonade med mynte og lime ",
+        "lang": "Den traditionelle hjemmelavde lime-lemonade, fra den klassiske mexsikanske opskrift. tilføj 4cl tequila for +30kr",
+        "oprindelse": "Mexico",
+        "billede": "mynte_lemonade"
+},
+    {
+        "id": 15,
+        "kategori": "drikkevarer",
+        "navn": "Cola",
+        "pris": 35,
+        "kort": "Hjemmelavet cola",
+        "lang": "Fantastisk autentisk hjemmelavet cola, med massere af lime og is",
+        "oprindelse": "Mexico",
+        "billede": "hjemmelavet-cola"
+}
+]
