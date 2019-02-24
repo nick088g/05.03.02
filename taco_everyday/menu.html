@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TACO EVERYDAY MENU</title>
+    <meta name="robots" content="noindex">
+    <style>
+        body {
+
+            background-image: url(pics/baggrundsbilleder/forside.jpg);
+            background-size: cover;
+            width: 100vw;
+            height: 100vw;
+            margin: auto;
+
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            font-family: ;
+            letter-spacing: 3px;
+            line-height: 30px;
+        }
+
+
+        h2 {
+            text-align: center;
+            font-family: '';
+            letter-spacing: 3px;
+            line-height: 30px;
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+
+        a {
+            font-family: ';
+letter-spacing: 2.5px;
+        }
+
+
+        nav {
+            text-align: center;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        .ret {
+            background-color: rgba(255, 165, 0, 0.8);
+            margin: 2vw;
+            padding: 15px;
+
+        }
+
+        #liste {
+            background-color: rgba(255, 165, 0, 0);
+            display: grid;
+            grid-template-columns: 10fr 10fr 10fr;
+        }
+
+        .valgt {
+            background-color: #d9d7d7;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        splash {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            top: 50vw;
+        }
+
+
+
+
+
+
+        /*        ************************** KNAPPER I MENUKORT**************************/
+
+
+        /* tekst farve i lille flex */
+        nav button:link {
+            color: white;
+
+        }
+
+        /* tekst farve i sotr flec*/
+        nav button:visited {
+            color: black;
+
+        }
+
+        /* mous over link */
+        nav button:hover {
+            color: white;
+            background-color: orange;
+        }
+
+
+        nav button {
+            display: block;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 10px;
+            border-bottom: solid orange 2px;
+            border-top: rgba(255, 255, 255, 0);
+            border-left: rgba(255, 255, 255, 0);
+            border-right: rgba(255, 255, 255, 0);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+
+
+        }
+
+        @media only screen and (min-width: 725px) {
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+
+
+            nav button {
+
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0);
+                color: black;
+                justify-content: space-around;
+                margin-left: auto;
+                margin-right: auto;
+
+
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /********************  Menu Forsiden  ********************/
+
+
+        /* tekst farve i lille flex */
+        nav a:link {
+            color: black;
+        }
+
+        /* tekst farve i sotr flec*/
+        nav a:visited {
+            color: black;
+        }
+
+        /* mous over link */
+        nav a:hover {
+            color: white;
+            background-color: orange;
+        }
+
+
+        nav a {
+            border: double orange;
+            border-radius: 12px;
+            display: block;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        @media only screen and (min-width: 725px) {
+
+            nav {
+                display: flex;
+
+            }
+
+            nav a {
+                border: double orange;
+                border-radius: 12px;
+                text-decoration: none;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0);
+                color: black;
+                justify-content: space-around;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 25px;
+
+
+
+            }
+
+        }
+
+    </style>
+</head>
+
+
+
+
+
+
+
+<!--__________________________________________________________HTML_____________________________________________________________-->
+
+
+
+
+
+
+<body>
+
+    <h1> TACO EVERYDAY</h1>
+
+    <splash>
+        <img src="pics/logo.svg" alt="Logo">
+    </splash>
+
+    <header>
+
+        <nav id="navigeringsmenu">
+            <a href="index.html">FORSIDE</a>
+            <a href="omos.html">OM OS</a>
+            <a href="kontaktos.html">KONTAKT OS</a> </nav>
+
+
+        <nav>
+            <button class="filter" data-kategori="alle">Alle</button>
+            <button class="filter" data-kategori="forretter">Forretter</button>
+            <button class="filter" data-kategori="hovedretter">Hovedretter</button>
+            <button class="filter" data-kategori="desserter">Desserter</button>
+            <button class="filter" data-kategori="sideorders">Sideorders</button>
+            <button class="filter" data-kategori="drikkevarer">Drikkevarer</button>
+
+
+        </nav>
+    </header>
+
+    <section id="liste">
+        <article class="ret"></article>
+    </section>
+
+
+    <footer></footer>
+
+
+
+
+
+
+
+
+
+
+    <!--_____________________________________________JAVA SCRIPT_________________________________________-->
+
+
+
+
+    <script>
+        let retter = [];
+        let filter = "alle";
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let dest = document.querySelector("#liste");
+            async function getJson() {
+                let jsonData = await fetch("taco_tekst.json");
+                retter = await jsonData.json();
+                retter.sort((a, b) => {
+                    return a.navn.localeCompare(b.navn);
+                })
+
+                visRetter();
+            }
+
+            function visRetter() {
+                dest.innerHTML = "";
+                retter.forEach(ret => {
+                    if (filter == "alle" || filter == ret.kategori) {
+
+                        let template = `
+                            <div class="ret">
+                                <h2>${ret.navn}</h2> <br>
+                                <p>Ret nr: ${ret.id}</p> <br>
+                                <img src = "pics/mad_billeder/${ret.billede}.jpg">
+                                <p>Pris: ${ret.pris}</p>
+                                <p>Kort beskrivelse: ${ret.kort}</p>
+                                <p>Oprindelse: ${ret.oprindelse}</p>
+
+                           </div>
+                    `;
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", () => {
+                            location.href = "tacoSigleView.html?id=" + ret.id;
+                        });
+
+                    }
+                })
+
+            }
+
+            //fuction visPersoner slut
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+            function filtrering() {
+                filter = this.getAttribute("data-kategori");
+                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                visRetter();
+            }
+
+
+
+
+            getJson();
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
