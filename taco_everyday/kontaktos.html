@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTAKT OS</title>
+    <meta name="robots" content="noindex">
+
+
+    <style>
+        h1 {
+            font-family:
+                color: white;
+        }
+
+        a {
+            font-family:
+                letter-spacing: 2.5px;
+        }
+
+        p {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        #logo_forside {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            top: 50vw;
+
+
+
+        }
+
+        .sectionwrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .column {
+
+            flex-grow: 1;
+            flex-basis: 100px;
+
+
+
+        }
+
+        /***************************FORSIDE******************************/
+
+        .baggrunds_billede {
+            /* baggrunds billedet*/
+            background-image: url("pics/baggrundsbilleder/kontaktos.jpg");
+
+
+            /* skærm udfyldningen*/
+            height: 100vh;
+            width: 100vw;
+
+            filter: opacity(30%);
+
+
+
+            /* centrere billedet */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* positioner teksten i midten af billedet/baggrunden */
+        .baggrunds_firkant {
+
+            /* sort men gennemsigtig baggrund */
+            background-color: orange;
+
+            text-align: center;
+
+
+            height: 650px;
+            width: 650px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+
+        }
+
+
+
+
+
+        /********************  Menu Forsiden  ********************/
+
+
+        /* tekst farve i lille flex */
+        nav a:link {
+            color: black;
+        }
+
+        /* tekst farve i sotr flec*/
+        nav a:visited {
+            color: black;
+        }
+
+        /* mous over link */
+        nav a:hover {
+            color: white;
+            background-color: orange;
+        }
+
+
+        nav a {
+            border: double white;
+            border-radius: 12px;
+            display: block;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        @media only screen and (min-width: 725px) {
+
+            nav {
+                display: flex;
+
+            }
+
+            nav a {
+                border: double white;
+                border-radius: 12px;
+                text-decoration: none;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0);
+                color: black;
+                justify-content: space-around;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 25px;
+            }
+
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="baggrunds_billede"></div>
+
+    <div class="baggrunds_firkant">
+
+        <div id="logo_forside">
+            <img src="pics/logo.svg" alt="logo"></div>
+
+        <nav>
+            <a href="index.html">FORSIDE</a>
+            <a href="omos.html">OM OS</a>
+            <a href="menu.html">MENU KORT</a>
+        </nav>
+
+        <div class="column">
+
+            <ul>
+                <h3>Åbningstider</h3>
+                <p>Man-Tors 14:00 - 22:30 <br>
+                    Fre-Søn 12:00 - 01:00 </p>
+                <h3>Kontakt os </h3>
+                <p>Tlf: 0045 25 45 25 24 <br>
+                    Mail: Mexicobooking@hotmail.com <br>
+                    Adresse: Chr. IX’s Gade 6, 1111 København K </p>
+
+            </ul>
+
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

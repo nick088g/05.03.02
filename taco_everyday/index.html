@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TACO EVERYDAY</title>
+    <link rel="stylesheet" href="">
+    <meta name="robots" content="noindex">
+
+    <style>
+        img {
+            width: 100%;
+
+        }
+
+        body {
+            margin: 3px;
+
+        }
+
+        #splash {
+            /* baggrunds billedet*/
+            background-image: url(pics/baggrundsbilleder/forside.jpg);
+
+            /* skærm udfyldningen*/
+            height: 100vh;
+            width: 100vw;
+
+            /* centrere billedet */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+
+        #logo_forside {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            top: 50vw;
+
+        }
+
+        a {
+            font-family:
+                letter-spacing: 2.5px;
+        }
+
+
+        /********************  Menu Forsiden  *********************/
+
+        /* tekst farve i lille flex */
+        nav a:link {
+            color: black;
+        }
+
+        /* tekst farve i sotr flec*/
+        nav a:visited {
+            color: black;
+        }
+
+        /* mous over link */
+        nav a:hover {
+            color: white;
+            background-color: orange;
+        }
+
+
+        nav a {
+            border: double orange;
+            border-radius: 12px;
+            display: block;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        @media only screen and (min-width: 725px) {
+
+            nav {
+                display: flex;
+
+            }
+
+            nav a {
+                border: double orange;
+                border-radius: 12px;
+                text-decoration: none;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0);
+                color: black;
+                justify-content: space-around;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <div id="splash">
+            <div id="logo_forside">
+                <img src="pics/logo.svg" alt="logo"></div>
+            <nav>
+                <a href="omos.html">OM OS</a>
+                <a href="menu.html">MENU KORT</a>
+                <a href="kontaktos.html">KONTAKT OS</a> </nav>
+
+        </div>
+    </header>
+
+    <script></script>
+</body>
+
+</html>
