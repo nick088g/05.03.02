@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="robots" content="noindex">
+    <style>
+        img {
+            width: 100%;
+        }
+
+        #singleview {
+            background-image: url(pics/menu_kort.png);
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+
+        #luk {
+            box-sizing: border-box;
+            text-align: right;
+            padding-right: 1em;
+
+        }
+
+        #luk button {
+            font-size: 2em;
+            background-color: rgba(255, 255, 255, 0);
+            border: solid rgba(0, 0, 0, 0);
+        }
+
+
+        #indhold {
+            box-sizing: border-box;
+            background-color: orange;
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+        }
+
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+    <div id="singleview">
+
+        <div id="luk"><button>X</button></div>
+        <div id="indhold"></div>
+
+    </div>
+
+
+
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        console.log(id)
+
+        let retter = [];
+        let ret;
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            let dest = document.querySelector("#singleview");
+
+            async function getJson() {
+                let jsonData = await fetch("taco_tekst.json");
+                retter = await jsonData.json();
+                retter.forEach(obj => {
+                    if (obj.id == id) {
+                        ret = obj;
+                    }
+                })
+                console.log(ret)
+                aabn();
+            }
+
+
+            function aabn() {
+
+                document.querySelector("#indhold").innerHTML = `
+<article class="ret">
+    <h2>${ret.navn}</h2>
+    <img src="pics/mad_billeder/${ret.billede}.jpg">
+    <p>Pris: ${ret.pris} </p>
+    <p>Beskrivelse: ${ret.lang}</p>
+</article>
+`
+
+            }
+
+            document.querySelector("#luk button").addEventListener("click", () => {
+                location.href = "menu.html"
+            })
+
+            getJson();
+        }
+
+    </script>
+</body>
+
+</html>
